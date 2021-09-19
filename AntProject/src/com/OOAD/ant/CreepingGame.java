@@ -44,6 +44,8 @@ public class CreepingGame {
             for (int i = 0; i < antCount - 1; i++) {
                 Ant p1 = ants.get(i);
                 Ant p2 = ants.get(i + 1);
+                if (p1.getOnStick() == false || p2.getOnStick() == false)
+                    continue;
                 if (p1.getDirection() == 1 && p2.getDirection() == -1 && (p2.getPosition() - p1.getPosition()) < (p1.getVelocity() + p2.getVelocity())) {
                     p1.changeDir();
                     p2.changeDir();
@@ -68,5 +70,9 @@ public class CreepingGame {
 
     public int getTime() {
         return time;
+    }
+
+    public List<Ant> getAnts() {
+        return ants;
     }
 }

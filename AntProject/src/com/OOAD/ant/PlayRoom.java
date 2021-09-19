@@ -7,7 +7,7 @@ public class PlayRoom {
     private static int minTime = Integer.MAX_VALUE;
     private static int maxTime = 0;
 
-    private static long incTime = 2;
+    private static final long incTime = 5;
 
     public static void main(String[] args) throws InterruptedException {
 
