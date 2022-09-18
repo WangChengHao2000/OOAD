@@ -65,7 +65,7 @@ class CreepPanel extends JPanel implements Runnable {
         List<Ant> ants = cg.getAnts();
         for (int i = 0; i < ants.size(); i++) {
             if (ants.get(i).getPosition() >= 0 && ants.get(i).getPosition() <= 300) {
-                g.setColor(new Color(0, 0, 0));
+                g.setColor(new Color(50 * i, 30 * (5 - i), 10 * i));
                 g.fillOval(ants.get(i).getPosition() + 100, y, 10, 10);
             }
         }
